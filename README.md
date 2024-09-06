@@ -1,8 +1,8 @@
 # Azure Networking Hackathon
 
-1. Draai de BICEP template in je eigen omgeving. Koppel de VNET’s nog niet aan VWAN.
+1. Draai de BICEP template van je team in je eigen omgeving. Koppel de VNET’s nog niet aan VWAN.
 2. Bekijk de NIC van de VM, welke effective routes zie je daarin terugkomen?
-3. Koppel de VNET’s aan de VWAN. Speel met de routing configuration en controleer daarbij welke routes je op de VM ziet terugkomen. 
+3. Koppel de VNET’s aan de VWAN. Zie: https://learn.microsoft.com/en-us/azure/virtual-wan/howto-connect-vnet-hub. Speel met de routing configuration en controleer daarbij welke routes je op de NIC van de VM ziet terugkomen. 
 4. Wat is het verschil tussen route association en route propogation?
 5. Kijk of de VM’s elkaar kunnen benaderen.
 6. Koppel nu een Azure Firewall Basic in je HUB. Stel in de security configuration in dat de vnet’s beveiligd moeten worden met Azure Firewall. Welke routes zie je nu terugkomen in je VM’s?

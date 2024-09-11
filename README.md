@@ -1,5 +1,10 @@
 # Azure Networking Hackathon
 
+1. Open Visual Studio Code.
+2. Installeer de benodigde Powershell modules door het volgende script te runnen: 
+3. Log via de Powershell terminal in op je Azure omgeving waar je de resources wilt deployen door gebruik te maken van Connect-AzAccount. 
+
+
 1. Draai de BICEP template van je team in je eigen omgeving. Koppel de VNET’s nog niet aan VWAN.
 2. Bekijk de NIC van de VM, welke effective routes zie je daarin terugkomen?
 3. Koppel de VNET’s aan de VWAN. Zie: https://learn.microsoft.com/en-us/azure/virtual-wan/howto-connect-vnet-hub. Speel met de routing configuration en controleer daarbij welke routes je op de NIC van de VM ziet terugkomen. 

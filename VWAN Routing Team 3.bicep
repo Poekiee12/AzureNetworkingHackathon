@@ -95,7 +95,7 @@ module virtualMachine1 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
     vmSize: 'Standard_D2as_v4'
     zone: 0
     // Non-required parameters
-    adminPassword: 'MiniHackathon123!'
+    adminPassword: 'Hackathon123!'
     location: 'WestEurope'
     ultraSSDEnabled: false
   }
@@ -138,7 +138,7 @@ module virtualMachine2 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
     vmSize: 'Standard_D2as_v4'
     zone: 0
     // Non-required parameters
-    adminPassword: 'MiniHackathon123!'
+    adminPassword: 'Hackathon123!'
     location: 'WestEurope'
     ultraSSDEnabled: false
   }
@@ -208,7 +208,7 @@ module virtualMachine3 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
     vmSize: 'Standard_D2as_v4'
     zone: 0
     // Non-required parameters
-    adminPassword: 'MiniHackathon123!'
+    adminPassword: 'Hackathon123!'
     location: 'WestEurope'
     ultraSSDEnabled: false
   }

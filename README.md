@@ -9,7 +9,7 @@ Install-Module Az -Force
 4. Log via de Powershell terminal in op je Azure omgeving door het commando "Connect-AzAccount" te gebruiken.
 5. Gebruik het volgende commando om het BICEP bestand uit te rollen:
 New-AzResourceGroupDeployment -ResourceGroupName "<resourcegroupname>" -TemplateFile "<c:\map\vwan routing team x.bicep>" -Verbose
-6. Deze uitrol kan tot ongeveer 45 minuten duren. **Mocht je een foutmelding krijgen betreft een domainnamelabel, kun je dit voor nu negeren.**
+6. Deze uitrol kan tot ongeveer 45 minuten duren.
 
 ## Opdrachten
 

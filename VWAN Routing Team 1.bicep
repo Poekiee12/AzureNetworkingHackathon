@@ -256,3 +256,15 @@ module virtualNetworkGateway 'br/public:avm/res/network/virtual-network-gateway:
     vpnType: 'RouteBased'
   }
 }
+
+module localNetworkGateway 'br/public:avm/res/network/local-network-gateway:0.3.0' = {
+  name: 'LNG01'
+  params: {
+    name: 'LNG01'
+    localAddressPrefixes: [
+      '10.10.0.0/16'
+      '10.11.0.0/16'
+    ]
+    localGatewayPublicIpAddress: '1.1.1.1'
+  }
+}

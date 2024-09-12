@@ -11,7 +11,7 @@ Install-Module Az -Force
 3. Mogelijk moet je je Visual Studio Code herstarten nadat je dit commando hebt uitgevoerd.
 4. Log via de Powershell terminal in op je Azure omgeving door het commando "Connect-AzAccount" te gebruiken.
 5. Gebruik het volgende commando om het BICEP bestand uit te rollen:
-New-AzResourceGroupDeployment -ResourceGroupName "<resourcegroupname>" -TemplateFile "<c:\map\vwan routing team x.bicep>" -Verbose
+New-AzResourceGroupDeployment -ResourceGroupName "resourcegroupname" -TemplateFile "c:\map\vwan routing team x.bicep" -Verbose
 6. Deze uitrol kan tot ongeveer 45 minuten duren.
 
 ## Opdrachten

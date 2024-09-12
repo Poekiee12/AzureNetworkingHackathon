@@ -1,4 +1,4 @@
-module virtualWan 'br/public:avm/res/network/virtual-wan:0.1.1' = {
+module virtualWan 'br/public:avm/res/network/virtual-wan:0.3.0' = {
   name: 'virtualWanDeployment'
   params: {
     // Required parameters
@@ -6,7 +6,7 @@ module virtualWan 'br/public:avm/res/network/virtual-wan:0.1.1' = {
   }
 }
 
-module virtualHub 'br/public:avm/res/network/virtual-hub:0.1.1' = {
+module virtualHub 'br/public:avm/res/network/virtual-hub:0.2.2' = {
   name: 'virtualHubDeployment'
   params: {
     // Required parameters
@@ -19,7 +19,7 @@ module virtualHub 'br/public:avm/res/network/virtual-hub:0.1.1' = {
   ]
 }
 
-module virtualNetwork1 'br/public:avm/res/network/virtual-network:0.1.6' = {
+module virtualNetwork1 'br/public:avm/res/network/virtual-network:0.4.0' = {
   name: 'virtualNetworkDeployment1'
   params: {
     // Required parameters
@@ -40,7 +40,7 @@ module virtualNetwork1 'br/public:avm/res/network/virtual-network:0.1.6' = {
   ]
 }
 
-module virtualNetwork2 'br/public:avm/res/network/virtual-network:0.1.6' = {
+module virtualNetwork2 'br/public:avm/res/network/virtual-network:0.4.0' = {
   name: 'virtualNetworkDeployment2'
   params: {
     // Required parameters
@@ -61,7 +61,7 @@ module virtualNetwork2 'br/public:avm/res/network/virtual-network:0.1.6' = {
   ]
 }
 
-module virtualMachine1 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
+module virtualMachine1 'br/public:avm/res/compute/virtual-machine:0.7.0' = {
   name: 'virtualMachineDeployment321'
   params: {
     // Required parameters
@@ -104,7 +104,7 @@ module virtualMachine1 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
   ]
 }
 
-module virtualMachine2 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
+module virtualMachine2 'br/public:avm/res/compute/virtual-machine:0.7.0' = {
   name: 'virtualMachineDeployment123'
   params: {
     // Required parameters
@@ -149,7 +149,7 @@ module virtualMachine2 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
 
 // Optionele opdrachten
 
-module virtualNetwork3 'br/public:avm/res/network/virtual-network:0.1.6' = {
+module virtualNetwork3 'br/public:avm/res/network/virtual-network:0.4.0' = {
   name: 'virtualNetworkDeployment3'
   params: {
     // Required parameters
@@ -174,7 +174,7 @@ module virtualNetwork3 'br/public:avm/res/network/virtual-network:0.1.6' = {
   ]
 }
 
-module virtualMachine3 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
+module virtualMachine3 'br/public:avm/res/compute/virtual-machine:0.7.0' = {
   name: 'virtualMachineDeployment213'
   params: {
     // Required parameters
@@ -217,7 +217,7 @@ module virtualMachine3 'br/public:avm/res/compute/virtual-machine:0.4.2' = {
   ]
 }
 
-module vpnGateway 'br/public:avm/res/network/vpn-gateway:0.1.2' = {
+module vpnGateway 'br/public:avm/res/network/vpn-gateway:0.1.3' = {
   name: 'vpnGatewayDeployment123'
   params: {
     // Required parameters
@@ -228,29 +228,12 @@ module vpnGateway 'br/public:avm/res/network/vpn-gateway:0.1.2' = {
   }
 }
 
-module localNetworkGateway 'br/public:avm/res/network/local-network-gateway:0.1.1' = {
-  name: 'localNetworkGatewayDeployment'
-  params: {
-    // Required parameters
-    localAddressPrefixes: [
-      '10.12.0.0/24'
-    ]
-    localGatewayPublicIpAddress: '8.8.8.8'
-    name: 'LNG01'
-    // Non-required parameters
-    location: 'WestEurope'
-  }
-  dependsOn: [
-    vpnGateway
-  ]
-}
-
-module virtualNetworkGateway 'br/public:avm/res/network/virtual-network-gateway:0.1.3' = {
+module virtualNetworkGateway 'br/public:avm/res/network/virtual-network-gateway:0.3.0' = {
   name: 'virtualNetworkGatewayDeployment'
   params: {
     // Required parameters
     gatewayType: 'Vpn'
-    name: 'VPNGW01'
+    name: 'VPNGW02'
     skuName: 'VpnGw2AZ'
     vNetResourceId: virtualNetwork3.outputs.resourceId
     // Non-required parameters
@@ -259,10 +242,10 @@ module virtualNetworkGateway 'br/public:avm/res/network/virtual-network-gateway:
     disableIPSecReplayProtection: true
     enableBgpRouteTranslationForNat: true
     enablePrivateIpAddress: true
-    gatewayDefaultSiteLocalNetworkGatewayId: localNetworkGateway.outputs.resourceId
     location: 'WestEurope'
     domainNameLabel: [
-      'dm-nvgvpn'
+      'team4'
+      'team4-2'
     ]
     publicIpZones: [
       1
@@ -272,7 +255,4 @@ module virtualNetworkGateway 'br/public:avm/res/network/virtual-network-gateway:
     vpnGatewayGeneration: 'Generation2'
     vpnType: 'RouteBased'
   }
-  dependsOn: [
-    localNetworkGateway
-  ]
 }

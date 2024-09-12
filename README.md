@@ -57,3 +57,4 @@ Aan het eind presenteer je de volgende dingen:
 - Wat is een Site-to-Site connection? - 5 punten
 - Wat is static routing? Wat is BGP? Wat zijn de voor en nadelen van beide oplossingen? - 10 punten
 - Wat is je opgevallen aan de verschillen van de effectieve routes op een NIC van een VM na aanpassingen? - 5 punten
+- Leuke vorm van presentatie - 10 punten

@@ -31,7 +31,7 @@ Je ziet als het goed is dat er een aantal resources zijn uitgerold:
 5. Kijk of de VM’s elkaar kunnen benaderen door gebruik te maken van een ping of test-netconnection commando.
 
 ### Opdracht 2
-1. Koppel nu een Azure Firewall Standard in je HUB. Gebruik hiervoor de Firewall Policy FWP01 die al klaar staat.
+1. Koppel nu een Azure Firewall Standard in je HUB. Gebruik hiervoor de Firewall Policy FWP01 die al klaar staat. Het uitrollen hiervan duurt ongeveer 10 minuten.
 2. Schakel diagnostic settings aan voor de Azure Firewall. Selecteer alle opties voor logging.
 3. Stel in de security configuration in dat de vnet’s beveiligd moeten worden met Azure Firewall. Welke routes zie je nu terugkomen in je VM’s?
 4. Haal de security configuration weg in de Azure Firewall weg. Schakel Routing intent i.c.m. met de Azure Firewall in op de HUB. Zie je nu iets veranderen in de routing op de VM's?

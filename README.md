@@ -1,5 +1,8 @@
 # Azure Networking Hackathon
 
+Zie onderstaande plaat voor hetgeen wat we straks gaan uitrollen:
+![image](/Netwerktekening.png)
+
 ## Uitrol Azure Resources
 
 1. Open Visual Studio Code. Zorg dat je het BICEP bestand voor je team lokaal op je laptop hebt staan.

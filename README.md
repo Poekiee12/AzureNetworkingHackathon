@@ -21,6 +21,7 @@ Je ziet als het goed is dat er een aantal resources zijn uitgerold:
 - 1 VPN Gateway, gekoppeld in de Virtual WAN HUB
 - 1 Virtual Network Gateway
 - 1 Local Network Gateway
+- 1 Firewall Policy
 
 
 ### Opdracht 1
@@ -30,12 +31,14 @@ Je ziet als het goed is dat er een aantal resources zijn uitgerold:
 5. Kijk of de VM’s elkaar kunnen benaderen door gebruik te maken van een ping of test-netconnection commando.
 
 ### Opdracht 2
-1. Koppel nu een Azure Firewall Standard in je HUB. Stel in de security configuration in dat de vnet’s beveiligd moeten worden met Azure Firewall. Welke routes zie je nu terugkomen in je VM’s?
-2. Haal de security configuration weg in de Azure Firewall weg. Schakel Routing intent i.c.m. met de Azure Firewall in op de HUB. Zie je nu iets veranderen in de routing op de VM's?
-3. Wat is routing intent en hoe werkt dit precies? Hoe verschilt routing intent met de security configuration functie?
+1. Koppel nu een Azure Firewall Standard in je HUB. Gebruik hiervoor de Firewall Policy FWP01 die al klaar staat.
+2. Schakel diagnostic settings aan voor de Azure Firewall. Selecteer alle opties voor logging.
+3. Stel in de security configuration in dat de vnet’s beveiligd moeten worden met Azure Firewall. Welke routes zie je nu terugkomen in je VM’s?
+4. Haal de security configuration weg in de Azure Firewall weg. Schakel Routing intent i.c.m. met de Azure Firewall in op de HUB. Zie je nu iets veranderen in de routing op de VM's?
+5. Controleer in de firewall logging of je verkeer voorbij ziet komen van je VM's.
 
 ### Opdracht 3
-1. Maak een Site-to-Site VPN connectie in de VPNGW02 met de Virtual WAN VPNGW01. Zie voor de VPNGW01 configuratie: https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-site-to-site-portal#site. Zie voor de VPNGW02 configuratie: https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal#LocalNetworkGateway. **LET OP: De LNG01 bestaat al, je hoeft hier enkel de configuratie voor aan te passen, namelijk het publieke IP adres van de VPNGW01.** 
+1. Maak een Site-to-Site VPN connectie tussen de VPNGW01 en VPNGW02. Zie voor de VPNGW01 configuratie: https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-site-to-site-portal#site. Zie voor de VPNGW02 configuratie: https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal#LocalNetworkGateway. **LET OP: De Local Network Gateway LNG01 bestaat al, je hoeft hier enkel de configuratie voor aan te passen, namelijk het publieke IP adres van de VPNGW01.** 
 2. Maak in eerste instantie gebruik van statische routering. Wat zie je veranderen in de routering van de VWAN?
 3. Test of je kunt verbinden vanaf de VM01/VM02 naar de VM03 door middel van een ping of test-netconnection.
 4. Pas de statische routering aan en configureer BGP. Wat zie je veranderen in de routering op de VWAN?
@@ -45,8 +48,9 @@ Je ziet als het goed is dat er een aantal resources zijn uitgerold:
 ### Presentatie
 
 Aan het eind presenteer je de volgende dingen:
-- Per opdracht, wat ging er goed, waar liep je tegen aan?
-- Wat is het verschil tussen route association en route propogation?
-- Wat is Routing Intent en Security Configuration? Wat is het verschil er tussen? 
-- Wat is een Site-to-Site connection?
-- Wat is static routing? Wat is BGP? Wat zijn de voor en nadelen van beide oplossingen?
+- Per opdracht, wat ging er goed, waar liep je tegen aan? - 10 punten per opdracht
+- Wat is het verschil tussen route association en route propogation? - 10 punten
+- Wat is Routing Intent en Security Configuration? Wat is het verschil er tussen? - 15 punten
+- Wat is een Site-to-Site connection? - 5 punten
+- Wat is static routing? Wat is BGP? Wat zijn de voor en nadelen van beide oplossingen? - 10 punten
+- Wat is je opgevallen aan de verschillen van de effectieve routes op een NIC van een VM na aanpassingen? - 5 punten

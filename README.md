@@ -58,8 +58,8 @@ Je ziet als het goed is dat er een aantal resources zijn uitgerold:
 
 Aan het eind presenteer je de volgende dingen:
 - Per opdracht, wat ging er goed, waar liep je tegen aan? - 10 punten per opdracht
-- Wat is het verschil tussen route association en route propogation? - 10 punten
-- Wat is Routing Intent en Security Configuration? Wat is het verschil er tussen? - 15 punten
+- Wat is het verschil tussen route association en route propogation? - 5 punten
+- Wat is Routing Intent en Security Configuration? Wat is het verschil er tussen? - 5 punten
 - Wat is een Site-to-Site connection? - 5 punten
 - Wat is static routing? Wat is BGP? Wat zijn de voor en nadelen van beide oplossingen? - 10 punten
 - Wat is je opgevallen aan de verschillen van de effectieve routes op een NIC van een VM na aanpassingen? - 5 punten

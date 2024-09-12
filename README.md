@@ -9,7 +9,7 @@ Install-Module Az -Force
 4. Log via de Powershell terminal in op je Azure omgeving door het commando "Connect-AzAccount" te gebruiken.
 5. Gebruik het volgende commando om het BICEP bestand uit te rollen:
 New-AzResourceGroupDeployment -ResourceGroupName "<resourcegroupname>" -TemplateFile "<c:\map\vwan routing team x.bicep>" -Verbose
-6. Deze uitrol kan tot ongeveer 45 minuten duren.
+6. Deze uitrol kan tot ongeveer 45 minuten duren. **Mocht je een foutmelding krijgen betreft een domainnamelabel, kun je dit voor nu negeren.**
 
 ## Opdrachten
 
@@ -41,3 +41,12 @@ Je ziet als het goed is dat er een aantal resources zijn uitgerold:
 4. Pas de statische routering aan en configureer BGP. Wat zie je veranderen in de routering op de VWAN?
 5. Test of je kunt verbinden met de VM van het andere team door middel van een ping of test-netconnection.
 6. Wat is het verschil tussen de statische routering en het gebruik van BGP? Zijn er voor en nadelen?
+
+### Presentatie
+
+Aan het eind presenteer je de volgende dingen:
+- Per opdracht, wat ging er goed, waar liep je tegen aan?
+- Wat is het verschil tussen route association en route propogation?
+- Wat is Routing Intent en Security Configuration? Wat is het verschil er tussen? 
+- Wat is een Site-to-Site connection?
+- Wat is static routing? Wat is BGP? Wat zijn de voor en nadelen van beide oplossingen?

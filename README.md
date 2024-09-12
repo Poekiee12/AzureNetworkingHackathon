@@ -48,6 +48,12 @@ Je ziet als het goed is dat er een aantal resources zijn uitgerold:
 5. Test of je kunt verbinden met de VM van het andere team door middel van een ping of test-netconnection.
 6. Wat is het verschil tussen de statische routering en het gebruik van BGP? Zijn er voor en nadelen?
 
+### Opdracht 4 - Geadvanceerd - Optioneel
+1. Creëer een tweede secured virtual hub in de bestaande Virtual WAN.
+2. Creëer een VNET04 met een VM04 hierin. Koppel dit VNET aan de VWAN.
+3. Zorg dat de VM's via de Secured Virtual HUB's met elkaar kunnen praten. Gebruik hiervoor onder andere Routing Intent.
+4. Zorg ervoor dat de VM03 via de VPNGW02 ook met de nieuwe VM04 kan communiceren. Mogelijk moet je hiervoor nieuwe resources aanmaken, maar dit mag je zelf uitzoeken :-)
+
 ### Presentatie
 
 Aan het eind presenteer je de volgende dingen:

@@ -244,8 +244,8 @@ module virtualNetworkGateway 'br/public:avm/res/network/virtual-network-gateway:
     enablePrivateIpAddress: true
     location: 'WestEurope'
     domainNameLabel: [
-      'team4'
-      'team4-2'
+      'team1'
+      'team1-2'
     ]
     publicIpZones: [
       1

@@ -269,3 +269,50 @@ module localNetworkGateway 'br/public:avm/res/network/local-network-gateway:0.3.
   }
 }
 
+module firewallpolicy 'br/public:avm/res/network/firewall-policy:0.1.3' = {
+  name: 'FWdeployment123'
+  params: {
+    name: 'FWP01'
+    // Non-required parameters
+    tier: 'Standard'
+    ruleCollectionGroups: [
+      {
+        name: 'rule-001'
+        priority: 1000
+        ruleCollections: [
+          {
+            action: {
+              type: 'Allow'
+            }
+            name: 'AllowAll'
+            priority: 1001
+            ruleCollectionType: 'FirewallPolicyFilterRuleCollection'
+            rules: [
+              {
+                destinationAddresses: [
+                  '*'
+                ]
+                destinationFqdns: []
+                destinationIpGroups: []
+                destinationPorts: [
+                  '*'
+                ]
+                ipProtocols: [
+                  'TCP'
+                  'UDP'
+                  'ICMP'
+                ]
+                name: 'rule01'
+                ruleType: 'NetworkRule'
+                sourceAddresses: [
+                  '*'
+                ]
+                sourceIpGroups: []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -3,6 +3,13 @@
 Zie onderstaande plaat voor hetgeen wat we straks gaan uitrollen:
 ![image](/Netwerktekening.png)
 
+## Prerequisites
+- Visual Studio Code
+- Powershell
+- AZ module
+- BICEP
+- Azure omgeving waarin je Owner bent
+
 ## Uitrol Azure Resources
 
 1. Open Visual Studio Code. Zorg dat je het BICEP bestand voor je team lokaal op je laptop hebt staan.
